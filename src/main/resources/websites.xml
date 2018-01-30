@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<websites>
+    <website group="freebuf.工具" limit="5">
+        <url>http://www.freebuf.com/sectool</url>
+        <item css=".news-info">
+            <title css="dl > dt > a" />
+            <url css="dl > dt > a" />
+            <desc css=".text" />
+        </item>
+        <emails>
+            <email>zhangyw_001@126.com</email>
+        </emails>
+    </website>
+    <website group="freebuf.漏洞" limit="5">
+        <url>http://www.freebuf.com/vuls</url>
+        <item css=".news-info">
+            <title css="dl > dt > a" />
+            <url css="dl > dt > a" />
+            <desc css=".text" />
+        </item>
+        <emails>
+            <email>zhangyw_001@126.com</email>
+        </emails>
+    </website>
+    <website group="freebuf.web安全" limit="5">
+        <url>http://www.freebuf.com/articles/web</url>
+        <item css=".news-info">
+            <title css="dl > dt > a" />
+            <url css="dl > dt > a" />
+            <desc css=".text" />
+        </item>
+        <emails>
+            <email>zhangyw_001@126.com</email>
+            <email>985246372@qq.com</email>
+        </emails>
+    </website>
+    <website group="freebuf.网络安全" limit="5">
+        <url>http://www.freebuf.com/articles/network</url>
+        <item css=".news-info">
+            <title css="dl > dt > a" />
+            <url css="dl > dt > a" />
+            <desc css=".text" />
+        </item>
+        <emails>
+            <email>zhangyw_001@126.com</email>
+            <email>985246372@qq.com</email>
+        </emails>
+    </website>
+    <website group="开发者头条" limit="10">
+        <url>https://toutiao.io/</url>
+        <item css=".posts > .post">
+            <title css=".content > .title > a" />
+            <url css=".title > a" prefix="https://toutiao.io" />
+            <desc css=".subject-name" />
+        </item>
+        <emails>
+            <email>zhangyw_001@126.com</email>
+            <email>985246372@qq.com</email>
+        </emails>
+    </website>
+</websites>
