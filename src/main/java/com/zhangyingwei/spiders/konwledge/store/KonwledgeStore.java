@@ -37,8 +37,10 @@ public class KonwledgeStore implements IStore {
             konwledge.setEmails(config.getEmails());
             konwledge.setGroup(config.getGroup());
 
-            System.out.println(konwledge);
-            cacheMap.put(config.getGroup(),konwledge);
+            if (konwledge.isEmpty()) {
+                System.out.println("|-title-| " + konwledge.getTitle());
+                cacheMap.put(config.getGroup(),konwledge);
+            }
         });
     }
 }

@@ -14,7 +14,7 @@ import com.zhangyingwei.spiders.konwledge.store.KonwledgeStore;
  */
 @EnableAutoConfiguration
 @AppName("知识小偷")
-@ThreadConfig(num = 1,sleep = 1000)
+@ThreadConfig(num = 1,sleep = 500)
 @Store(KonwledgeStore.class)
 @AutoClose(true)
 public class Applicatoin {

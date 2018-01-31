@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <websites>
+    <!-- 安全相关 -->
     <website group="freebuf.工具" limit="5">
         <url>http://www.freebuf.com/sectool</url>
         <item css=".news-info">
@@ -8,7 +9,7 @@
             <desc css=".text" />
         </item>
         <emails>
-            <email>zhangyw_001@126.com</email>
+            <email user="自己" >zhangyw_001@126.com</email>
         </emails>
     </website>
     <website group="freebuf.漏洞" limit="5">
@@ -19,7 +20,7 @@
             <desc css=".text" />
         </item>
         <emails>
-            <email>zhangyw_001@126.com</email>
+            <email user="自己" >zhangyw_001@126.com</email>
         </emails>
     </website>
     <website group="freebuf.web安全" limit="5">
@@ -30,8 +31,8 @@
             <desc css=".text" />
         </item>
         <emails>
-            <email>zhangyw_001@126.com</email>
-            <email>985246372@qq.com</email>
+            <email user="自己">zhangyw_001@126.com</email>
+            <!--<email>985246372@qq.com</email>-->
         </emails>
     </website>
     <website group="freebuf.网络安全" limit="5">
@@ -42,10 +43,12 @@
             <desc css=".text" />
         </item>
         <emails>
-            <email>zhangyw_001@126.com</email>
-            <email>985246372@qq.com</email>
+            <email user="自己">zhangyw_001@126.com</email>
+            <!--<email>985246372@qq.com</email>-->
         </emails>
     </website>
+
+    <!-- 开发者头条 -->
     <website group="开发者头条" limit="10">
         <url>https://toutiao.io/</url>
         <item css=".posts > .post">
@@ -54,8 +57,223 @@
             <desc css=".subject-name" />
         </item>
         <emails>
-            <email>zhangyw_001@126.com</email>
-            <email>985246372@qq.com</email>
+            <email user="自己">zhangyw_001@126.com</email>
+            <email user="老婆">985246372@qq.com</email>
+            <email user="韩星">hanx250031@163.com</email>
+            <email user="泽鹏">zepeng036@163.com</email>
+            <email user="王基欢">245767619@qq.com</email>
+        </emails>
+    </website>
+
+    <!-- 开源中国 -->
+    <website group="开源中国.博客" limit="15">
+        <url>https://www.oschina.net/blog</url>
+        <item css=".blog-list > .item">
+            <title css=".blog-title-box > a" />
+            <url css=".blog-title-box > a" />
+            <desc css=".text-gradient" />
+        </item>
+        <emails>
+            <email user="自己">zhangyw_001@126.com</email>
+            <!--<email user="老婆">985246372@qq.com</email>-->
+            <email user="韩星">hanx250031@163.com</email>
+            <email user="泽鹏">zepeng036@163.com</email>
+            <email user="王基欢">245767619@qq.com</email>
+        </emails>
+    </website>
+
+    <website group="开源中国.开源资讯" limit="15">
+        <url>https://www.oschina.net/blog</url>
+        <item css="#all-news > .item">
+            <title css=".main-info > a" />
+            <url css=".main-info > a" prefix="https://www.oschina.net" />
+            <desc css=".sc-text" />
+        </item>
+        <emails>
+            <email user="自己">zhangyw_001@126.com</email>
+            <!--<email user="老婆">985246372@qq.com</email>-->
+            <email user="韩星">hanx250031@163.com</email>
+            <email user="泽鹏">zepeng036@163.com</email>
+            <email user="王基欢">245767619@qq.com</email>
+        </emails>
+    </website>
+
+    <!-- V2EX -->
+    <website group="V2EX.技术" limit="15">
+        <url>https://www.v2ex.com/?tab=tech</url>
+        <item css=".box > .item">
+            <title css=".item_title > a" />
+            <url css=".item_title > a" prefix="https://www.v2ex.com" />
+            <desc css=".fade > strong:nth-child(3)" />
+        </item>
+        <emails>
+            <email user="自己">zhangyw_001@126.com</email>
+            <email user="老婆">985246372@qq.com</email>
+            <email user="韩星">hanx250031@163.com</email>
+            <email user="泽鹏">zepeng036@163.com</email>
+            <email user="王基欢">245767619@qq.com</email>
+        </emails>
+    </website>
+
+    <website group="V2EX.创意" limit="15">
+        <url>https://www.v2ex.com/?tab=creative</url>
+        <item css=".box > .item">
+            <title css=".item_title > a" />
+            <url css=".item_title > a" prefix="https://www.v2ex.com" />
+            <desc css=".fade > strong:nth-child(3)" />
+        </item>
+        <emails>
+            <email user="自己">zhangyw_001@126.com</email>
+            <!--<email user="老婆">985246372@qq.com</email>-->
+            <email user="韩星">hanx250031@163.com</email>
+            <email user="泽鹏">zepeng036@163.com</email>
+            <email user="王基欢">245767619@qq.com</email>
+        </emails>
+    </website>
+
+    <website group="V2EX.APPLE" limit="15">
+        <url>https://www.v2ex.com/?tab=apple</url>
+        <item css=".box > .item">
+            <title css=".item_title > a" />
+            <url css=".item_title > a" prefix="https://www.v2ex.com" />
+            <desc css=".fade > strong:nth-child(3)" />
+        </item>
+        <emails>
+            <email user="自己">zhangyw_001@126.com</email>
+            <email user="老婆">985246372@qq.com</email>
+            <email user="韩星">hanx250031@163.com</email>
+            <!--<email user="泽鹏">zepeng036@163.com</email>-->
+            <!--<email user="王基欢">245767619@qq.com</email>-->
+        </emails>
+    </website>
+
+    <!-- 小专栏 -->
+    <website group="小专栏" limit="5">
+        <!-- 这个也有问题 -->
+        <url>https://xiaozhuanlan.com</url>
+        <item css=".postArticle > .xzl-topic-item">
+            <title css=".topic-body > .topic-title" />
+            <url css=".topic-body > .topic-body-link" prefix="https://xiaozhuanlan.com" />
+            <desc css=".topic-content" />
+        </item>
+        <emails>
+            <email user="自己">zhangyw_001@126.com</email>
+            <!--<email user="老婆">985246372@qq.com</email>-->
+            <!--<email user="韩星">hanx250031@163.com</email>-->
+            <!--<email user="泽鹏">zepeng036@163.com</email>-->
+            <!--<email user="王基欢">245767619@qq.com</email>-->
+        </emails>
+    </website>
+    <website group="segmentfault" limit="10">
+        <url>https://segmentfault.com/blogs</url>
+        <item css=".stream-list > .stream-list__item">
+            <title css=".title > a" />
+            <url css=".title > a" prefix="https://segmentfault.com" />
+            <desc css=".summary > p" />
+        </item>
+        <emails>
+            <email user="自己">zhangyw_001@126.com</email>
+            <!--<email user="老婆">985246372@qq.com</email>-->
+            <email user="韩星">hanx250031@163.com</email>
+            <!--<email user="泽鹏">zepeng036@163.com</email>-->
+            <email user="王基欢">245767619@qq.com</email>
+        </emails>
+    </website>
+
+    <!-- 简书 -->
+    <website group="简书.深度学习-神经网络-计算机视觉" limit="5">
+        <url>https://www.jianshu.com/c/71b2d8a98305</url>
+        <item css="#list-container > ul > li">
+            <title css=".title" />
+            <url css=".title" prefix="https://www.jianshu.com" />
+            <desc css=".abstract" />
+        </item>
+        <emails>
+            <email user="自己">zhangyw_001@126.com</email>
+        </emails>
+    </website>
+    <website group="简书.Machine Learning - Data Analysis" limit="5">
+        <url>https://www.jianshu.com/c/70eae73cf556</url>
+        <item css="#list-container > ul > li">
+            <title css=".title" />
+            <url css=".title" prefix="https://www.jianshu.com" />
+            <desc css=".abstract" />
+        </item>
+        <emails>
+            <email user="自己">zhangyw_001@126.com</email>
+        </emails>
+    </website>
+
+    <website group="简书.机器学习与计算机视觉" limit="5">
+        <url>https://www.jianshu.com/c/ee1275bb82ca</url>
+        <item css="#list-container > ul > li">
+            <title css=".title" />
+            <url css=".title" prefix="https://www.jianshu.com" />
+            <desc css=".abstract" />
+        </item>
+        <emails>
+            <email user="自己">zhangyw_001@126.com</email>
+        </emails>
+    </website>
+
+    <website group="简书.大数据-机器学习-人工智能" limit="5">
+        <url>https://www.jianshu.com/c/86ff829f995f</url>
+        <item css="#list-container > ul > li">
+            <title css=".title" />
+            <url css=".title" prefix="https://www.jianshu.com" />
+            <desc css=".abstract" />
+        </item>
+        <emails>
+            <email user="自己">zhangyw_001@126.com</email>
+        </emails>
+    </website>
+
+    <website group="简书.软件测试" limit="5">
+        <url>https://www.jianshu.com/c/3f7695959dda</url>
+        <item css="#list-container > ul > li">
+            <title css=".title" />
+            <url css=".title" prefix="https://www.jianshu.com" />
+            <desc css=".abstract" />
+        </item>
+        <emails>
+            <email user="老婆">985246372@qq.com</email>
+        </emails>
+    </website>
+
+    <website group="简书.软件测试职业探索" limit="5">
+        <url>https://www.jianshu.com/c/813a3b29d5fd</url>
+        <item css="#list-container > ul > li">
+            <title css=".title" />
+            <url css=".title" prefix="https://www.jianshu.com" />
+            <desc css=".abstract" />
+        </item>
+        <emails>
+            <email user="老婆">985246372@qq.com</email>
+        </emails>
+    </website>
+
+    <website group="简书.Selenium" limit="5">
+        <url>https://www.jianshu.com/c/e3d800185923</url>
+        <item css="#list-container > ul > li">
+            <title css=".title" />
+            <url css=".title" prefix="https://www.jianshu.com" />
+            <desc css=".abstract" />
+        </item>
+        <emails>
+            <email user="老婆">985246372@qq.com</email>
+        </emails>
+    </website>
+
+    <website group="简书.JavaScript 进阶营" limit="5">
+        <url>https://www.jianshu.com/c/f63dac4d430e</url>
+        <item css="#list-container > ul > li">
+            <title css=".title" />
+            <url css=".title" prefix="https://www.jianshu.com" />
+            <desc css=".abstract" />
+        </item>
+        <emails>
+            <email user="老婆">985246372@qq.com</email>
+            <email user="自己">zhangyw_001@126.com</email>
         </emails>
     </website>
 </websites>

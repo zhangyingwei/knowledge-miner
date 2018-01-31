@@ -1,6 +1,7 @@
 package com.zhangyingwei.spiders.konwledge.model;
 
 import lombok.Data;
+import org.apache.commons.lang.StringUtils;
 
 import java.util.List;
 import java.util.Set;
@@ -21,6 +22,10 @@ public class Konwledge {
     private String group;
 
     public String content() {
-        return String.format("<div style='margin:5px; background: #4285f4;padding:10px;border-radius:2px;border-top:5px solid #fbbc05;'><a style='color:#f4f3f4;font-size:15px;text-decoration:none;' href='%s'>%s</a><span style='background-color:#ea4335; padding:2px 5px;margin:10px;color:#fff;border-radius:4px;'>%s</span><p style='font-size:13px;color:#f4f3f4;'>%s</p> </div>",this.url,this.title,this.group,this.desc);
+        return String.format("<div style='margin:10px;border-bottom:2px solid #f4f3f4;'><a style='color:#f4f3f4;font-size:15px;text-decoration:none;' href='%s'>%s</a><p style='font-size:13px;color:#f4f3f4;'>%s</p> </div>",this.url,this.title,this.desc);
+    }
+
+    public boolean isEmpty() {
+        return StringUtils.isNotEmpty(this.title);
     }
 }

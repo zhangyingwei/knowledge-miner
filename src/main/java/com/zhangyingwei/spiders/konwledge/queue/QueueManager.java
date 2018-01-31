@@ -52,7 +52,7 @@ public class QueueManager {
             @Override
             public void run() {
                 try {
-                    TimeUnit.SECONDS.sleep(30);
+                    TimeUnit.SECONDS.sleep(60);
                     while (!queue.isEmpty()) {
                         TimeUnit.SECONDS.sleep(1);
                     }
