@@ -33,15 +33,14 @@ public class XmlConfigLoader {
             WebSiteConfig config = new WebSiteConfig();
             config.setGroup(website.attributeValue("group"));
             config.setLimit(Integer.parseInt(website.attributeValue("limit")));
-
-            String prefix = website.element("url").attributeValue("prefix");
-            config.setUrl(Optional.ofNullable(prefix).orElse("") + website.elementText("url"));
+            config.setUrl(website.elementText("url"));
 
             Element item = website.element("item");
             config.setItemCss(item.attributeValue("css"));
 
             ItemConfig itemConfig = new ItemConfig();
             itemConfig.setUrl(item.element("url").attributeValue("css"));
+            itemConfig.setUrlPrefix(item.element("url").attributeValue("prefix"));
             itemConfig.setTitle(item.element("title").attributeValue("css"));
             itemConfig.setDesc(item.element("desc").attributeValue("css"));
 

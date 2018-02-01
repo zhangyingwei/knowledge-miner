@@ -25,10 +25,7 @@ public class EmailService {
             String content = this.bulidContent(entity.getValue());
             try {
                 TimeUnit.SECONDS.sleep(10);
-                new Smail(new SmailConfig().setStarttls(true))
-                        .auth("zhangyw_001@163.com","")
-                        .to(email)
-                        .send("起来觅食了", content);
+                new Smail(new SmailConfig().setStarttls(true)).auth("zhangyw_001@163.com","").to(email).send("起来觅食了", content);
                 System.out.println("发邮件成功 "+email);
                 System.out.println("-------------------");
             } catch (Exception e) {

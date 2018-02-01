@@ -8,6 +8,8 @@ import com.zhangyingwei.spiders.konwledge.config.ItemConfig;
 import com.zhangyingwei.spiders.konwledge.config.WebSiteConfig;
 import com.zhangyingwei.spiders.konwledge.model.Konwledge;
 
+import java.util.Optional;
+
 /**
  * @author: zhangyw
  * @date: 2018/1/30
@@ -32,13 +34,13 @@ public class KonwledgeStore implements IStore {
 
             Konwledge konwledge = new Konwledge();
             konwledge.setTitle(title);
-            konwledge.setUrl(url);
+            konwledge.setUrl(Optional.ofNullable(itemConfig.getUrlPrefix()).orElse("") + url);
             konwledge.setDesc(desc);
             konwledge.setEmails(config.getEmails());
             konwledge.setGroup(config.getGroup());
 
             if (konwledge.isEmpty()) {
-                System.out.println("|-title-| " + konwledge.getTitle());
+                System.out.println("|-title-| " + konwledge.getTitle() + "|-url-| "+konwledge.getUrl());
                 cacheMap.put(config.getGroup(),konwledge);
             }
         });

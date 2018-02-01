@@ -12,5 +12,6 @@ import lombok.Data;
 public class ItemConfig {
     private String title;
     private String url;
+    private String urlPrefix;
     private String desc;
 }
