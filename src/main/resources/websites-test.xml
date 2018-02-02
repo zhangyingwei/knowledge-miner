@@ -32,7 +32,6 @@
         </item>
         <emails>
             <email user="自己">zhangyw_001@126.com</email>
-            <!--<email>985246372@qq.com</email>-->
         </emails>
     </website>
     <website group="freebuf.网络安全" limit="5">
@@ -44,7 +43,6 @@
         </item>
         <emails>
             <email user="自己">zhangyw_001@126.com</email>
-            <!--<email>985246372@qq.com</email>-->
         </emails>
     </website>
 
@@ -58,12 +56,6 @@
         </item>
         <emails>
             <email user="自己">zhangyw_001@126.com</email>
-            <email user="老婆">985246372@qq.com</email>
-            <email user="韩星">hanx250031@163.com</email>
-            <email user="泽鹏">zepeng036@163.com</email>
-            <email user="忘了是谁">245767619@qq.com</email>
-            <email user="赵玉良">zhaoyl@yuntongxun.com</email>
-            <email user="王基欢">601238546@qq.com</email>
         </emails>
     </website>
 
@@ -77,12 +69,6 @@
         </item>
         <emails>
             <email user="自己">zhangyw_001@126.com</email>
-            <!--<email user="老婆">985246372@qq.com</email>-->
-            <email user="韩星">hanx250031@163.com</email>
-            <email user="泽鹏">zepeng036@163.com</email>
-            <email user="忘了是谁">245767619@qq.com</email>
-            <email user="赵玉良">zhaoyl@yuntongxun.com</email>
-            <email user="王基欢">601238546@qq.com</email>
         </emails>
     </website>
 
@@ -95,12 +81,6 @@
         </item>
         <emails>
             <email user="自己">zhangyw_001@126.com</email>
-            <!--<email user="老婆">985246372@qq.com</email>-->
-            <email user="韩星">hanx250031@163.com</email>
-            <email user="泽鹏">zepeng036@163.com</email>
-            <email user="忘了是谁">245767619@qq.com</email>
-            <email user="赵玉良">zhaoyl@yuntongxun.com</email>
-            <email user="王基欢">601238546@qq.com</email>
         </emails>
     </website>
 
@@ -114,12 +94,6 @@
         </item>
         <emails>
             <email user="自己">zhangyw_001@126.com</email>
-            <email user="老婆">985246372@qq.com</email>
-            <email user="韩星">hanx250031@163.com</email>
-            <email user="泽鹏">zepeng036@163.com</email>
-            <email user="忘了是谁">245767619@qq.com</email>
-            <email user="赵玉良">zhaoyl@yuntongxun.com</email>
-            <email user="王基欢">601238546@qq.com</email>
         </emails>
     </website>
 
@@ -132,12 +106,6 @@
         </item>
         <emails>
             <email user="自己">zhangyw_001@126.com</email>
-            <!--<email user="老婆">985246372@qq.com</email>-->
-            <email user="韩星">hanx250031@163.com</email>
-            <email user="泽鹏">zepeng036@163.com</email>
-            <email user="忘了是谁">245767619@qq.com</email>
-            <email user="赵玉良">zhaoyl@yuntongxun.com</email>
-            <email user="王基欢">601238546@qq.com</email>
         </emails>
     </website>
 
@@ -150,10 +118,6 @@
         </item>
         <emails>
             <email user="自己">zhangyw_001@126.com</email>
-            <email user="老婆">985246372@qq.com</email>
-            <email user="韩星">hanx250031@163.com</email>
-            <!--<email user="泽鹏">zepeng036@163.com</email>-->
-            <!--<email user="忘了是谁">245767619@qq.com</email>-->
         </emails>
     </website>
 
@@ -168,12 +132,6 @@
         </item>
         <emails>
             <email user="自己">zhangyw_001@126.com</email>
-            <email user="赵玉良">zhaoyl@yuntongxun.com</email>
-            <email user="王基欢">601238546@qq.com</email>
-            <!--<email user="老婆">985246372@qq.com</email>-->
-            <!--<email user="韩星">hanx250031@163.com</email>-->
-            <!--<email user="泽鹏">zepeng036@163.com</email>-->
-            <!--<email user="忘了是谁">245767619@qq.com</email>-->
         </emails>
     </website>
     <website group="segmentfault" limit="10">
@@ -185,12 +143,6 @@
         </item>
         <emails>
             <email user="自己">zhangyw_001@126.com</email>
-            <!--<email user="老婆">985246372@qq.com</email>-->
-            <email user="韩星">hanx250031@163.com</email>
-            <!--<email user="泽鹏">zepeng036@163.com</email>-->
-            <email user="忘了是谁">245767619@qq.com</email>
-            <email user="赵玉良">zhaoyl@yuntongxun.com</email>
-            <email user="王基欢">601238546@qq.com</email>
         </emails>
     </website>
 
@@ -242,42 +194,6 @@
         </emails>
     </website>
 
-    <website group="简书.软件测试" limit="5">
-        <url>https://www.jianshu.com/c/3f7695959dda</url>
-        <item css="#list-container > ul > li">
-            <title css=".title" />
-            <url css=".title" prefix="https://www.jianshu.com" />
-            <desc css=".abstract" />
-        </item>
-        <emails>
-            <email user="老婆">985246372@qq.com</email>
-        </emails>
-    </website>
-
-    <website group="简书.软件测试职业探索" limit="5">
-        <url>https://www.jianshu.com/c/813a3b29d5fd</url>
-        <item css="#list-container > ul > li">
-            <title css=".title" />
-            <url css=".title" prefix="https://www.jianshu.com" />
-            <desc css=".abstract" />
-        </item>
-        <emails>
-            <email user="老婆">985246372@qq.com</email>
-        </emails>
-    </website>
-
-    <website group="简书.Selenium" limit="5">
-        <url>https://www.jianshu.com/c/e3d800185923</url>
-        <item css="#list-container > ul > li">
-            <title css=".title" />
-            <url css=".title" prefix="https://www.jianshu.com" />
-            <desc css=".abstract" />
-        </item>
-        <emails>
-            <email user="老婆">985246372@qq.com</email>
-        </emails>
-    </website>
-
     <website group="简书.JavaScript 进阶营" limit="5">
         <url>https://www.jianshu.com/c/f63dac4d430e</url>
         <item css="#list-container > ul > li">
@@ -286,10 +202,7 @@
             <desc css=".abstract" />
         </item>
         <emails>
-            <email user="老婆">985246372@qq.com</email>
             <email user="自己">zhangyw_001@126.com</email>
-            <email user="赵玉良">zhaoyl@yuntongxun.com</email>
-            <email user="王基欢">601238546@qq.com</email>
         </emails>
     </website>
 </websites>

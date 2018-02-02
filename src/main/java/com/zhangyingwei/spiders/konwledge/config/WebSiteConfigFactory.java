@@ -1,8 +1,11 @@
 package com.zhangyingwei.spiders.konwledge.config;
 
+import com.zhangyingwei.spiders.konwledge.common.PropertiesUtils;
 import lombok.Getter;
 import org.dom4j.DocumentException;
+import sun.security.pkcs11.wrapper.Constants;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -31,10 +34,11 @@ public class WebSiteConfigFactory {
 
     private void loadXml() {
         try {
-//            this.xmlConfigLoader = new XmlConfigLoader("src/main/resources/websites.xml");
-            this.xmlConfigLoader = new XmlConfigLoader("/home/knowledge/websites.xml");
+            this.xmlConfigLoader = new XmlConfigLoader(PropertiesUtils.get("website.config"));
             this.webSiteConfigs = this.xmlConfigLoader.load();
         } catch (DocumentException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }

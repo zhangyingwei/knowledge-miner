@@ -3,6 +3,7 @@ package com.zhangyingwei.spiders.konwledge;
 import com.zhangyingwei.cockroach.CockroachApplication;
 import com.zhangyingwei.cockroach.annotation.*;
 import com.zhangyingwei.cockroach.queue.CockroachQueue;
+import com.zhangyingwei.spiders.konwledge.common.PropertiesUtils;
 import com.zhangyingwei.spiders.konwledge.queue.QueueManager;
 import com.zhangyingwei.spiders.konwledge.store.KonwledgeStore;
 
@@ -19,6 +20,7 @@ import com.zhangyingwei.spiders.konwledge.store.KonwledgeStore;
 @AutoClose(true)
 public class Applicatoin {
     public static void main(String[] args) throws Exception {
+        PropertiesUtils.load(args[0]);
         CockroachQueue queue = new QueueManager().bulid();
         CockroachApplication.run(Applicatoin.class, queue);
     }

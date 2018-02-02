@@ -1,15 +1,19 @@
 package com.zhangyingwei.spiders.konwledge.service;
 
-import com.zhangyingwei.smail.ISmail;
 import com.zhangyingwei.smail.Smail;
 import com.zhangyingwei.smail.config.SmailConfig;
-import com.zhangyingwei.smail.exception.SmailException;
+import com.zhangyingwei.spiders.konwledge.common.PropertiesUtils;
 import com.zhangyingwei.spiders.konwledge.model.Konwledge;
+import com.zhangyingwei.spiders.konwledge.common.DateUtils;
+import org.beetl.core.Configuration;
+import org.beetl.core.GroupTemplate;
+import org.beetl.core.Template;
+import org.beetl.core.resource.StringTemplateResourceLoader;
 
-import javax.mail.MessagingException;
-import java.io.UnsupportedEncodingException;
+import java.io.*;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
+import java.util.stream.Collectors;
 
 /**
  * @author: zhangyw
@@ -18,14 +22,13 @@ import java.util.concurrent.TimeUnit;
  * @desc:
  */
 public class EmailService {
-
     public void send(Map<String, List<Konwledge>> emailMap) {
         emailMap.entrySet().forEach(entity -> {
             String email = entity.getKey();
-            String content = this.bulidContent(entity.getValue());
             try {
+                String content = this.bulidContent(entity.getValue());
                 TimeUnit.SECONDS.sleep(10);
-                new Smail(new SmailConfig().setStarttls(true)).auth("zhangyw_001@163.com","").to(email).send("起来觅食了", content);
+                new Smail(new SmailConfig().setStarttls(true)).auth(PropertiesUtils.get("email.username"),PropertiesUtils.get("email.password")).to(email).send("起来觅食了", content);
                 System.out.println("发邮件成功 "+email);
                 System.out.println("-------------------");
             } catch (Exception e) {
@@ -35,7 +38,7 @@ public class EmailService {
         });
     }
 
-    private String bulidContent(List<Konwledge> value) {
+    private String bulidContent(List<Konwledge> value) throws IOException {
         Map<String, List<Konwledge>> groupKon = new HashMap<String,List<Konwledge>>();
         value.forEach(konwledge -> {
             List<Konwledge> tmpKonws = Optional.ofNullable(groupKon.get(konwledge.getGroup())).orElse(new ArrayList<Konwledge>());
@@ -43,16 +46,33 @@ public class EmailService {
             groupKon.put(konwledge.getGroup(), tmpKonws);
         });
 
-        String content = "";
-        Set<Map.Entry<String, List<Konwledge>>> entitys = groupKon.entrySet();
-        for (Map.Entry<String, List<Konwledge>> entity : entitys) {
-            content +="<div style='background:#4285f4; margin-bottom: 20px;'>";
-            content += "<div style='color:#f4f3g4;background:#fbbc05;padding:2px;font-size:18px;text-align:center;border-radius:0 0 20px 20px;'>"+entity.getKey()+"</div>";
-            for (Konwledge konwledge : entity.getValue()) {
-                content += konwledge.content().concat("\n");
-            }
-            content +="</div>".concat("\n");
+        List<Map.Entry<String, List<Konwledge>>> enres = groupKon.entrySet().stream().collect(Collectors.toList());
+        enres.sort((a, b) -> {
+            return a.getKey().split("\\.")[0].compareTo(b.getKey().split("\\.")[0]);
+        });
+        Map<String, List<Konwledge>> result = new TreeMap<String, List<Konwledge>>();
+        for (Map.Entry<String, List<Konwledge>> enre : enres) {
+            result.put(enre.getKey(),enre.getValue());
         }
-        return content;
+        return this.bulidContentByBeetl(result);
+    }
+
+    private String bulidContentByBeetl(Map<String, List<Konwledge>> groupKon) throws IOException {
+        StringTemplateResourceLoader resourceLoader = new StringTemplateResourceLoader();
+        Configuration cfg = Configuration.defaultConfiguration();
+        GroupTemplate gt = new GroupTemplate(resourceLoader, cfg);
+        Template t = gt.getTemplate(this.readTemplate());
+        t.binding("datetime", DateUtils.currentDate());
+        t.binding("articles",groupKon);
+        return t.render();
+    }
+
+    private String readTemplate() throws IOException {
+        File file = new File(PropertiesUtils.get("email.template"));
+        BufferedInputStream in = new BufferedInputStream(new FileInputStream(file));
+        byte[] bytes = new byte[in.available()];
+        in.read(bytes);
+        in.close();
+        return new String(bytes);
     }
 }

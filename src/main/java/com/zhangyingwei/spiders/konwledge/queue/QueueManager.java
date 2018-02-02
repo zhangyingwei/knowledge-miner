@@ -9,6 +9,7 @@ import com.zhangyingwei.spiders.konwledge.config.WebSiteConfigFactory;
 import com.zhangyingwei.spiders.konwledge.model.Konwledge;
 import com.zhangyingwei.spiders.konwledge.service.EmailService;
 
+import java.io.IOException;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Stream;
@@ -24,7 +25,7 @@ public class QueueManager {
     private WebSiteConfigFactory configFactory;
     private EmailService emailService;
 
-    public QueueManager() {
+    public QueueManager() throws IOException {
         this.queue = TaskQueue.of();
         this.configFactory = new WebSiteConfigFactory();
         this.configFactory.load();
@@ -52,7 +53,7 @@ public class QueueManager {
             @Override
             public void run() {
                 try {
-                    TimeUnit.SECONDS.sleep(60);
+                    TimeUnit.SECONDS.sleep(10);
                     while (!queue.isEmpty()) {
                         TimeUnit.SECONDS.sleep(1);
                     }
