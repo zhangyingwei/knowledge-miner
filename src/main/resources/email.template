@@ -4,8 +4,8 @@
     <div style="background: #fff; width: 95%; margin: 0 auto;box-shadow: 0px 0px 20px -10px #43494c;">
     	<h1 style="color:#615858;padding:20px;font-size:18px;text-align:center;">${art.key}</h1>
     	<% for(kon in art.value){ %>
-	    <div style="margin:10px;border-bottom:2px solid #f4f3f4;">
-	        <a style="color:#607D8B;font-size:15px;text-decoration:none; font-weight:bolder; padding:15px 0;" href=""${kon.url}>${kon.title}</a>
+	    <div style="margin:10px;border-bottom:2px solid #f4f3f4;padding: 0 10px;">
+	        <a style="color:#607D8B;font-size:15px;text-decoration:none; font-weight:bolder; padding:15px 0;" href="${kon.url}">${kon.title}</a>
 	        <div style="font-size:13px;color:#9E9E9E;width: 100%;overflow: hidden; text-overflow:ellipsis; white-space: nowrap;padding: 10px 0;">${kon.desc}</div>
 	    </div>
 	    <% } %>

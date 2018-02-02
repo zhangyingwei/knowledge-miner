@@ -25,7 +25,7 @@ public class KonwledgeStore implements IStore {
         WebSiteConfig config = (WebSiteConfig) response.getTask().getExtr();
         ItemConfig itemConfig = config.getItemConfig();
 
-        System.out.println("获取成功：" + config.getGroup());
+        System.out.println("获取成功：" + config.getGroup() + " limit:" + config.getLimit());
 
         response.select(config.getItemCss()).stream().limit(config.getLimit()).forEach(element -> {
             String title = element.select(itemConfig.getTitle()).text();
