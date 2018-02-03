@@ -18,3 +18,5 @@ website.config=抓取网站配置文件地址
 
 ### website.xml
 抓取内容配置以及邮件配置
+
+![knowledge.jpg]("doc/img/knowledge.jpg")
