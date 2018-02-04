@@ -11,4 +11,9 @@ public class DateUtils {
         SimpleDateFormat format = new SimpleDateFormat("yyyy年MM月dd日");
         return format.format(new Date());
     }
+
+    public static String currentFileName() {
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+        return format.format(new Date()).concat(".html");
+    }
 }

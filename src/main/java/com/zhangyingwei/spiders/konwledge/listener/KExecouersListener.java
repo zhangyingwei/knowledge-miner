@@ -5,6 +5,7 @@ import com.zhangyingwei.spiders.konwledge.cache.CacheMap;
 import com.zhangyingwei.spiders.konwledge.model.Konwledge;
 import com.zhangyingwei.spiders.konwledge.service.EmailService;
 
+import java.io.IOException;
 import java.util.*;
 
 /**
@@ -37,8 +38,30 @@ public class KExecouersListener implements IExecutersListener {
         });
 
         Map<String, List<Konwledge>> emailMap = this.bulidEmailMap(konwledges);
+        Map<String, List<Konwledge>> htmlMap = this.bulidHtmlMap(konwledges);
         System.out.println("统计所有内容信息...");
         this.emailService.send(emailMap);
+        try {
+            this.emailService.toContentHtml(htmlMap);
+            this.emailService.toIndexHtml();
+        } catch (IOException e) {
+            System.out.println("生成 html 失败");
+            e.printStackTrace();
+        }
+    }
+
+    private Map<String, List<Konwledge>> bulidHtmlMap(List<Konwledge> konwledges) {
+        Map<String, List<Konwledge>> htmlMap = new HashMap<String, List<Konwledge>>();
+        List<String> gropupList = new ArrayList<String>();
+        konwledges.forEach(konwledge -> {
+            List<Konwledge> list = Optional.ofNullable(htmlMap.get(konwledge.getGroup())).orElse(new ArrayList<Konwledge>());
+            if (!gropupList.contains(konwledge.getUrl())) {
+                list.add(konwledge);
+                gropupList.add(konwledge.getUrl());
+            }
+            htmlMap.put(konwledge.getGroup(), list);
+        });
+        return htmlMap;
     }
 
     private Map<String, List<Konwledge>> bulidEmailMap(List<Konwledge> konwledges) {

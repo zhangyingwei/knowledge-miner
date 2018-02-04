@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>knowledge</title>
+</head>
+<body>
+<div class="main-content">
+	<header>
+		<h1>Knowledge thieves (一个小偷，哼！！！)</h1>
+	</header>
+	<section>
+		<div class="file-list">
+			<ul>
+                <% for(file in filelist){ %>
+                <a href="http://knowledge.zhangyingwei.com/${file}"><li>${file}</li></a>
+                <% } %>
+			</ul>
+		</div>
+	</section>
+	<footer>
+		Copyright © zhangyw. 2018
+	</footer>
+</div>
+<style type="text/css">
+	header{
+		text-align: center;
+		padding: 10px;
+	}
+	body{
+		padding: 0;
+		margin: 0;
+	}
+	section .file-list ul {
+		list-style: none;
+		margin: 0 auto;
+		padding: 0;
+		width: 80%;
+	}
+	section .file-list ul a{
+		text-decoration: none;
+	}
+	section .file-list ul li{
+		padding: 10px 20px;
+		margin: 2px 0;
+		background-color: #fff;
+		border-radius: 5px;
+		transition: text-align 2s ;
+		-moz-transition:text-align 2s ease-in; /* Firefox 4 */
+		-webkit-transition:text-align 2s ease-in; /* Safari and Chrome */
+		-o-transition:text-align 2s ease-in; /* Opera */
+	}
+
+	section .file-list ul li:hover{
+		background-color: #607d8b38;
+		color: #fff;
+		text-align: center;
+	}
+
+	footer{
+		width: 80%;
+		margin: 0 auto;
+		padding: 20px 0;
+		text-align: center;
+		font-size: 13px;
+		color: #c6cac6;
+	}
+	.main-content{
+		width: 80%;
+		max-width: 850px;
+		min-width: 500px;
+		padding: 0;
+		margin: 0 auto;
+		background-color: #eff6f9;
+	}
+</style>
+</body>
+</html>

@@ -71,7 +71,6 @@
             <email user="自己">zhangyw_001@126.com</email>
         </emails>
     </website>
-
     <website group="开源中国.开源资讯" limit="15">
         <url>https://www.oschina.net/blog</url>
         <item css="#all-news > .item">
@@ -83,7 +82,6 @@
             <email user="自己">zhangyw_001@126.com</email>
         </emails>
     </website>
-
     <!-- V2EX -->
     <website group="V2EX.技术" limit="15">
         <url>https://www.v2ex.com/?tab=tech</url>
@@ -96,7 +94,6 @@
             <email user="自己">zhangyw_001@126.com</email>
         </emails>
     </website>
-
     <website group="V2EX.创意" limit="15">
         <url>https://www.v2ex.com/?tab=creative</url>
         <item css=".box > .item">
@@ -108,7 +105,6 @@
             <email user="自己">zhangyw_001@126.com</email>
         </emails>
     </website>
-
     <website group="V2EX.APPLE" limit="15">
         <url>https://www.v2ex.com/?tab=apple</url>
         <item css=".box > .item">
@@ -120,7 +116,6 @@
             <email user="自己">zhangyw_001@126.com</email>
         </emails>
     </website>
-
     <!-- 小专栏 -->
     <website group="小专栏" limit="5">
         <!-- 这个也有问题 -->
@@ -169,7 +164,6 @@
             <email user="自己">zhangyw_001@126.com</email>
         </emails>
     </website>
-
     <website group="简书.机器学习与计算机视觉" limit="5">
         <url>https://www.jianshu.com/c/ee1275bb82ca</url>
         <item css="#list-container > ul > li">
@@ -181,7 +175,6 @@
             <email user="自己">zhangyw_001@126.com</email>
         </emails>
     </website>
-
     <website group="简书.大数据-机器学习-人工智能" limit="5">
         <url>https://www.jianshu.com/c/86ff829f995f</url>
         <item css="#list-container > ul > li">
@@ -193,7 +186,39 @@
             <email user="自己">zhangyw_001@126.com</email>
         </emails>
     </website>
-
+    <website group="简书.软件测试" limit="5">
+        <url>https://www.jianshu.com/c/3f7695959dda</url>
+        <item css="#list-container > ul > li">
+            <title css=".title" />
+            <url css=".title" prefix="https://www.jianshu.com" />
+            <desc css=".abstract" />
+        </item>
+        <emails>
+            <email user="老婆">985246372@qq.com</email>
+        </emails>
+    </website>
+    <website group="简书.软件测试职业探索" limit="5">
+        <url>https://www.jianshu.com/c/813a3b29d5fd</url>
+        <item css="#list-container > ul > li">
+            <title css=".title" />
+            <url css=".title" prefix="https://www.jianshu.com" />
+            <desc css=".abstract" />
+        </item>
+        <emails>
+            <email user="老婆">985246372@qq.com</email>
+        </emails>
+    </website>
+    <website group="简书.Selenium" limit="5">
+        <url>https://www.jianshu.com/c/e3d800185923</url>
+        <item css="#list-container > ul > li">
+            <title css=".title" />
+            <url css=".title" prefix="https://www.jianshu.com" />
+            <desc css=".abstract" />
+        </item>
+        <emails>
+            <email user="老婆">985246372@qq.com</email>
+        </emails>
+    </website>
     <website group="简书.JavaScript 进阶营" limit="5">
         <url>https://www.jianshu.com/c/f63dac4d430e</url>
         <item css="#list-container > ul > li">
@@ -202,6 +227,42 @@
             <desc css=".abstract" />
         </item>
         <emails>
+            <email user="老婆">985246372@qq.com</email>
+        </emails>
+    </website>
+    <website group="简书.PHP开发" limit="5">
+        <url>https://www.jianshu.com/c/aaf0e06c2815</url>
+        <item css="#list-container > ul > li">
+            <title css=".title" />
+            <url css=".title" prefix="https://www.jianshu.com" />
+            <desc css=".abstract" />
+        </item>
+        <emails>
+            <!--<email user="张英杰">sinper_zyj@163.com</email>-->
+            <email user="自己">zhangyw_001@126.com</email>
+        </emails>
+    </website>
+    <website group="简书.PHP经验分享" limit="5">
+        <url>https://www.jianshu.com/c/5b1d36fefe6a</url>
+        <item css="#list-container > ul > li">
+            <title css=".title" />
+            <url css=".title" prefix="https://www.jianshu.com" />
+            <desc css=".abstract" />
+        </item>
+        <emails>
+            <!--<email user="张英杰">sinper_zyj@163.com</email>-->
+            <email user="自己">zhangyw_001@126.com</email>
+        </emails>
+    </website>
+    <website group="简书.PHP探索与反思" limit="5">
+        <url>https://www.jianshu.com/c/669c6b2f44bb</url>
+        <item css="#list-container > ul > li">
+            <title css=".title" />
+            <url css=".title" prefix="https://www.jianshu.com" />
+            <desc css=".abstract" />
+        </item>
+        <emails>
+            <!--<email user="张英杰">sinper_zyj@163.com</email>-->
             <email user="自己">zhangyw_001@126.com</email>
         </emails>
     </website>

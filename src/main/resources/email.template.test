@@ -1,0 +1,38 @@
+<div style="background: #eff6f9;margin-bottom: 20px;max-width:850px;width: 80%;margin:0 auto;">
+    <div style="padding: 20px 20px; color: #5f7d8c; font-size: 17px; text-align: left;font-weight:bold;">${datetime} - 我随便发发你们随便看看 <a style="color: #607D8B; float: right; font-size: 15px;" href="http://http://knowledge.zhangyingwei.com/${datahtml}">查看原文</a></div>
+    <div style="">
+        <div class="knowledge-nav" style="width: 30%; float: left;">
+            <div style="background: #fff; width: 80%; font-size: 13px; font-weight: bold; margin: 0 auto;box-shadow: 0px 0px 20px -10px #43494c;">
+                <ul style="list-style: none; padding: 10px;">
+                <% for(art in articles){ %>
+                    <a style="text-decoration:none;" href="#${art.key}">
+                        <li class="li" style="color:#615858; padding: 5px;">${art.key}</li>
+                    </a>
+                <% } %>
+                </ul>
+            </div>
+        </div>
+        <div style="width: 70%; float: left;">
+            <% for (art in articles){ %>
+            <div style="background: #fff; width: 95%;box-shadow: 0px 0px 20px -10px #43494c;">
+                <h1 id="${art.key}" style="color:#615858;padding:20px;font-size:18px;text-align:center;">${art.key}</h1>
+                <% for(kon in art.value){ %>
+                <div style="margin:10px;border-bottom:2px solid #f4f3f4;">
+                    <a style="color:#607D8B;font-size:15px;text-decoration:none; font-weight:bolder; padding:15px 0;" href="${kon.url}">${kon.title}</a>
+                    <div style="font-size:13px;color:#9E9E9E;width: 100%;overflow: hidden; text-overflow:ellipsis; white-space: nowrap;padding: 10px 0;">${kon.desc}</div>
+                </div>
+                <% } %>
+            </div>
+            <% } %>
+    </div>
+    <div style="padding: 20px 20px; color: #9E9E9E; font-size: 8px; text-align: right;">
+        邮件来自 zhangyw 如果你不想继续订阅，请来打我，谢谢!!
+    </div>
+</div>
+
+<style>
+    .knowledge-nav li:hover {
+        background-color: #000;
+        color: #fff !important;
+    }
+</style>
