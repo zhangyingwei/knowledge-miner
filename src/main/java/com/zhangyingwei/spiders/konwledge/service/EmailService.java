@@ -25,9 +25,10 @@ import java.util.stream.Collectors;
 public class EmailService {
     private File file;
     private File indexFile;
-    private String htmlPath = "html";
+    private String htmlPath;
     public EmailService() {
         try {
+            this.htmlPath = PropertiesUtils.get("html.path");
             this.file = FileUtils.openOrCreate(htmlPath, DateUtils.currentFileName());
             this.indexFile = FileUtils.openOrCreate(htmlPath, "index.html");
         } catch (IOException e) {

@@ -2,8 +2,10 @@ package com.zhangyingwei.spiders.konwledge.listener;
 
 import com.zhangyingwei.cockroach.executer.listener.IExecutersListener;
 import com.zhangyingwei.spiders.konwledge.cache.CacheMap;
+import com.zhangyingwei.spiders.konwledge.common.DateUtils;
 import com.zhangyingwei.spiders.konwledge.model.Konwledge;
 import com.zhangyingwei.spiders.konwledge.service.EmailService;
+import com.zhangyingwei.spiders.konwledge.service.NoticeService;
 
 import java.io.IOException;
 import java.util.*;
@@ -14,9 +16,16 @@ import java.util.*;
 public class KExecouersListener implements IExecutersListener {
 
     private EmailService emailService;
+    private NoticeService noticeService;
 
     public KExecouersListener() {
         this.emailService = new EmailService();
+        try {
+            this.noticeService = new NoticeService();
+        } catch (IOException e) {
+            System.out.println("初始化推送服务失败");
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -48,6 +57,23 @@ public class KExecouersListener implements IExecutersListener {
             System.out.println("生成 html 失败");
             e.printStackTrace();
         }
+        if (this.noticeService != null) {
+            try {
+                this.noticeService.notice(DateUtils.currentDate()+" 发送邮件结果", this.bulidEmailList(emailMap));
+            } catch (IOException e) {
+                System.out.println("推送失败");
+                e.printStackTrace();
+            }
+        }
+    }
+
+    private String bulidEmailList(Map<String, List<Konwledge>> emailMap) {
+        StringBuffer res = new StringBuffer();
+        for (Map.Entry<String, List<Konwledge>> entity : emailMap.entrySet()) {
+            res.append(String.format("* 邮箱: %s \n* 发送条数: %d \n\n ==== \n\n", entity.getKey(),entity.getValue().size()));
+            res.append("\n");
+        }
+        return res.toString();
     }
 
     private Map<String, List<Konwledge>> bulidHtmlMap(List<Konwledge> konwledges) {
