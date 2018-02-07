@@ -1,3 +1,4 @@
+<meta charset="UTF-8" />
 <div style="background: #eff6f9;margin-bottom: 20px;max-width:850px;width: 80%;margin:0 auto;">
     <div style="padding: 20px 20px; color: #5f7d8c; font-size: 17px; text-align: left;font-weight:bold;">${datetime} - 我随便发发你们随便看看 <a style="color: #607D8B; float: right; font-size: 15px;" href="http://knowledge.zhangyingwei.com/${datahtml}">查看原文</a></div>
     <div style="">
